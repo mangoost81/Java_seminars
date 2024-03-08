@@ -7,7 +7,8 @@ import java.util.Arrays;
 
 public class MoveElems {
     public static void main(String[] args) {
-        int[] nums = {3,2,2,3,4,55,23,6,34,3,43,22,89,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,45,3};
+        int[] nums = { 3, 2, 2, 3, 4, 55, 23, 6, 34, 3, 43, 22, 89, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+                45, 3 };
         int val = 3;
         moveElemsToRight(nums, val);
         System.out.println(Arrays.toString(nums));
@@ -15,17 +16,17 @@ public class MoveElems {
 
     private static void moveElemsToRight(int[] nums, int val) {
         int leftIndex = 0;
-        int rightIndex = nums.length-1;
-        while (leftIndex<rightIndex) {
-            while (nums[rightIndex] == val && leftIndex<rightIndex) {
-                rightIndex --;
+        int rightIndex = nums.length - 1;
+        while (leftIndex < rightIndex) {
+            while (nums[rightIndex] == val && leftIndex < rightIndex) {
+                rightIndex--;
             }
-        if(nums[leftIndex] == val){
-            nums[leftIndex] = nums[rightIndex];
-            nums[rightIndex] = 3;
-            rightIndex --;
-        }
-        leftIndex++;
+            if (nums[leftIndex] == val) {
+                nums[leftIndex] = nums[rightIndex];
+                nums[rightIndex] = 3;
+                rightIndex--;
+            }
+            leftIndex++;
         }
     }
 }
