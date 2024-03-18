@@ -13,8 +13,8 @@ public class Path {
 
     public static void main(String[] args) {
         String[] content = getContentFolder(".");
-        System.out.println(Arrays.toString(content));
-        System.out.println(content.length);
+        // System.out.println(Arrays.toString(content));
+        // System.out.println(content.length);
         pathsOfDir(content);
 
     }
